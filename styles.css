@@ -1,0 +1,89 @@
+/* 
+  File: styles.css
+  Author: Tyler
+  Description: CSS for wack-a-mole
+*/
+
+/* General styles for the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #09a119;
+    text-align: center;
+}
+
+/* Styling for headings */
+h1, h2 {
+    color: #000000;
+}
+
+/* Styling for paragraphs */
+p {
+    color: #090101;
+}
+
+/* Styling for links */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+/* Change link style on hover */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Styles for sections */
+div[id^="section"] {
+    margin: 20px;
+    padding: 20px;
+    background-color: #09a119;
+    border: 1px solid #000801;
+}
+
+/* Styles for the image */
+.map-image {
+    width: 300px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Styles for the Whack-a-Mole game */
+#game {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    width: 400px;
+}
+
+/* Styling for each hole in the Whack-a-Mole game */
+.hole {
+    width: 100px;
+    height: 100px;
+    background-color: #8f4c05;
+    border: 1px solid #999;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hide the mole by default */
+.mole {
+    display: none;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+}
+
+/* Show the mole when the hole is active */
+.hole.up .mole {
+    display: block;
+}
+
+/* Styles for the score board */
+#score-board, #timer {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
