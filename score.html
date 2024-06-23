@@ -1,0 +1,48 @@
+<!--
+  File: score.html
+  Author: Tyler Johnson
+  Description: Score Page
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Score</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Linking external stylesheet -->
+    <style>
+        /* Additional styles for this specific page */
+        #score-container {
+            font-size: 30px; /* Adjust the font size as desired */
+            font-weight: bold; /* Makes the text bold */
+            color: #000000; /* Sets text color */
+        }
+        body {
+            text-align: center; /* Optional: Center-aligns content */
+            margin-top: 50px; /* Optional: Adds top margin for spacing */
+            background-color: #09a119; /* Sets the background color */
+        }
+        a {
+            display: block; /* Optional: Makes the link a block element */
+            margin-top: 20px; /* Optional: Adds top margin to the link */
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // When the DOM is fully loaded, retrieve the score parameter from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const score = urlParams.get('score'); // Get the value of 'score' parameter
+            document.getElementById('final-score').textContent = score; // Set the score value into the span element
+        });
+    </script>
+</head>
+<body>
+    <h1>Final Score</h1>
+    <div id="score-container">Your score: <span id="final-score"></span></div> <!-- Display the score dynamically -->
+    <img src="Again.png" usemap="#again" alt="Play Again" style="width: 500px; height: 200px;">
+    <map name="again">
+        <area shape="circle" coords="225,100,50" href="game.html" alt="Play Again"> <!-- Brings you back to the Wack-A-Mole Game -->
+    </map>
+    <a href="index.html" style="font-size: 24px;">Back to Main Page</a> <!-- Link to return to main page with inline style -->
+</body>
+</html>
