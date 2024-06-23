@@ -1,0 +1,30 @@
+<!--
+  File: page1.html
+  Author: Tyler Johnson
+  Description: Step 1
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 1</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Inline styles specific to this page */
+        p {
+            font-size: 24px;
+        }
+        /* Additional specific styles can be added here */
+    </style>
+</head>
+<body>
+    <h1>Step 1 for Wack-A-Mole</h1>
+    <p>- In order to hit the Mole you will use your mouse as a mallet to hit the mole.</p>
+    <img src="next.png" usemap="#next" alt="next" style="width: 500px; height: 300px;">
+    <map name="next">
+        <area shape="circle" coords="225,100,50" href="page2.html" alt="Step 2"> <!-- Brings you to Step 2 -->
+    </map>
+    <a href="index.html">Back to Main Page</a> <!-- Link to return to main page, now below the image -->
+</body>
+</html>
